@@ -1,6 +1,6 @@
-**This README is designed to showcase your Meesho Clone professionally on GitHub. It highlights the features you've built, like the interactive mega menu, infinite brand marquee, and the responsive category dome UI.**
 
-Meesho Clone - React.js
+
+** Meesho Clone** - React.js
 A high-fidelity frontend clone of the Meesho e-commerce platform built with React.js and CSS Modules. This project focuses on replicating complex UI patterns, interactive navigation systems, and responsive layouts.
 
 ✨ Key Features
