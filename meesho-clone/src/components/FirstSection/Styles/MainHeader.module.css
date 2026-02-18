@@ -1,0 +1,229 @@
+/* Header Base Styling */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    height: 72px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo & Search Area */
+.logoSearch {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 800;
+    color: #9f2089;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.searchArea {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #8b8ba3;
+    border-radius: 4px;
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Navigation & Vertical Lines */
+.navLinks {
+    display: flex;
+    align-items: center;
+}
+
+.navItem {
+    position: relative;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navItem::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 24px;
+    width: 1px;
+    background-color: #ddd;
+}
+
+.profileCartItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.investorName, .profileName, .cartName {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* --- Dropdown Logic --- */
+
+.profileContainer {
+    position: relative;
+    padding-bottom: 15px; /* Bridge to prevent menu closing */
+    margin-bottom: -15px;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 55px; /* Adjust based on header height */
+    right: 0;
+    width: 260px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 24px;
+    z-index: 1001;
+}
+
+.profileContainer:hover .dropdownMenu {
+    display: block;
+}
+
+.profileContainer:hover .profileCartItem {
+    color: #9f2089;
+    border-bottom: 3px solid #9f2089;
+}
+
+/* Dropdown Content Styling */
+.helloUser {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.subText {
+    font-size: 12px;
+    color: #666;
+    margin: 8px 0 20px 0;
+}
+
+.signUpBtn {
+    width: 100%;
+    background-color: #9f2089;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.signUpBtn:hover {
+    background-color: #821a70;
+}
+
+.divider {
+    height: 1px;
+    background-color: #f0f0f0;
+    margin: 15px 0;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: #333;
+    padding: 4px 0;
+}
+
+.menuItem:hover {
+    color: #9f2089;
+}
+/* Container to keep the dropdown aligned with the input */
+.searchContainer {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* The Dropdown Box */
+.searchDropdown {
+    position: absolute;
+    top: 100%; /* Directly below the searchArea */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-top: none; /* Merges visually with the input */
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1100;
+}
+
+.dropdownTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* Flex wrap for the tags */
+.tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Styling the "Pills/Tags" */
+.searchTag {
+    padding: 8px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 50px; /* Makes them rounded pills */
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: all 0.2s;
+}
+
+.searchTag:hover {
+    background-color: #fff;
+    border-color: #9f2089;
+    color: #9f2089;
+}

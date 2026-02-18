@@ -1,0 +1,51 @@
+.wrapitem {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px 10px;
+    background-color: #fff;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.itemCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.itemCard:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* The light pink arch shape in the background */
+.imageBg {
+    width: 140px;
+    height: 150px;
+    background-color: #fde9f2; /* Light pink from image */
+    border-radius: 80px 80px 10px 10px; /* Top rounded, bottom slightly rounded */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Keeps image at the bottom of the arch */
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.itemImg {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.itemName {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    text-align: center;
+}
+
+.itemCard:hover .itemName {
+    color: #9f2089; /* Changes text color to Meesho pink on hover */
+}

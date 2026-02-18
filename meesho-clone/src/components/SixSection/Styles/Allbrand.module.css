@@ -1,0 +1,56 @@
+.AllBrand {
+    width: 100%;
+    background-color: #f3f4ff;
+    padding: 30px 0;
+    overflow: hidden; /* Important: Hides the logos outside the container */
+    display: flex;
+}
+
+.brandContainer {
+    display: flex;
+    gap: 20px;
+    width: max-content; /* Container expands to fit all logos in one row */
+    animation: scrollInfinite 20s linear infinite;
+}
+
+/* Pause the scrolling when hovering over the whole section */
+.brandContainer:hover {
+    animation-play-state: paused;
+}
+
+.brandCard {
+    flex: 0 0 160px;
+    height: 90px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth "up" transition */
+}
+
+/* Individual card "comes up" effect on hover */
+.brandCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logoImg {
+    max-width: 85%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+/* The Animation Logic */
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move the container by exactly half its total width (one full set of logos) */
+        transform: translateX(-50%);
+    }
+}
